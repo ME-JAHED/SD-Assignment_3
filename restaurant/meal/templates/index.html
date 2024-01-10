@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3 g-4 p-4">
+    {% for i in categories %}
+    <div class="col p-5">
+      <div class="card h-100">
+        <img class="p-4" src="{{i.strCategoryThumb}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{i.strCategory}}</h5>
+          <p class="card-text" >{{  i.strCategoryDescription|slice:":100" }}</p>
+        
+        </div>
+      </div>
+    </div>
+
+{% endfor %}
+    
+  </div>
+
+{% endblock %}
